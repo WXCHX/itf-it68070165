@@ -29,7 +29,7 @@
                 <img class="user-img" src="https://tse4.mm.bing.net/th/id/OIP.awAiMS1BCAQ2xS2lcdXGlwHaHH?cb=12&rs=1&pid=ImgDetMain&o=7&rm=3" alt="user">
                 <div>
                     <h3>Account Information</h3>
-                    <p>Name: Wachirawit Potijak</p>
+                    <p>Name: Wachirawit</p>
                     <p>Type: Saving</p>
                 </div>
             </div>
@@ -40,18 +40,19 @@
                     <h3>Balance Information</h3>
                     <p>Current Account Balance:</p>
                     <div class="group">
-                        <input required="" type="text" class="input">
+                        <input id="abalance" required type="text" class="input">
                         <span class="highlight"></span>
                         <span class="bar"></span>
                         <label>Enter account balance</label>
-                        </div>
+                    </div>
+
                     <p>Current Cash Balance:</p>
                     <div class="group">
-                        <input required="" type="text" class="input">
+                        <input id="cbalance" required type="text" class="input">
                         <span class="highlight"></span>
                         <span class="bar"></span>
                         <label>Enter cash balance</label>
-                        </div>
+                    </div>
 
                     <br><br>
                     <button class="button_top" id="change" type="button" onclick="money_set()">Change</button>
@@ -67,11 +68,11 @@
                         <option value="Withdraw">Withdraw</option>
                     </select>
                     <div class="group">
-                        <input required="" type="text" class="input">
+                        <input id="amount" required type="text" class="input">
                         <span class="highlight"></span>
                         <span class="bar"></span>
                         <label>Enter amount</label>
-                        </div>
+                    </div>
                     <button id="submit" class="button_top" type="button" onclick="do_action()">Proceed</button>
                 </div>
             </div>
@@ -84,22 +85,22 @@
                 <img class="user-img" src="https://cdn-icons-png.flaticon.com/512/10692/10692946.png" alt="currency">
                 <div>
                     <h3>Currency Converter</h3>
-                    <p>Input Balance:
-                        <div class="group">
-                        <input required="" type="text" class="input">
+                    <p>Input Balance:</p>
+                    <div class="group">
+                        <input id="inputCurrency" required type="text" class="input">
                         <span class="highlight"></span>
                         <span class="bar"></span>
                         <label>Enter amount</label>
-                        </div>
-                    </p>
-                    <p>Output Balance: 
-                        <div class="group">
-                        <input required="" type="text" class="input">
+                    </div>
+
+                    <p>Output Balance:</p>
+                    <div class="group">
+                        <input id="outputCurrency" required type="text" class="input" readonly>
                         <span class="highlight"></span>
                         <span class="bar"></span>
-                        <label>Enter amount</label>
-                        </div>
-                    </p>
+                        <label>Converted amount</label>
+                    </div>
+
                     <select id="currency">
                         <option value="USD">USD</option>
                         <option value="EUR">EUR</option>
