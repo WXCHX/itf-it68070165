@@ -11,20 +11,76 @@
         <nav>68070165</nav>
         <div class="logo"><p>ma bank</p></div>
     </div>
+
     <div class="toxbex">
-        <textarea name="" id="" class="text"> Lorem ipsum dolor sit amet consectetur adipisicing elit. Culpa nihil corrupti eaque dicta sapiente voluptatum praesentium, quas assumenda a consequatur placeat beatae, eius facilis quidem tenetur in amet ad minus.</textarea>
+        <textarea id="log" class="text" readonly></textarea>
     </div>
-    <div>
-        <div class="acchead">ACCOUNT OVERVEIW</div>
-        <div class="acc-inform">
-            <img class="user-img" src="https://tse4.mm.bing.net/th/id/OIP.awAiMS1BCAQ2xS2lcdXGlwHaHH?cb=12&rs=1&pid=ImgDetMain&o=7&rm=3" alt="user">
-            <div class="">
-                <p>Account information</p>
-                <p>Name: Wachirawit Potijak</p>
-                <p>Type: Saving</p>
+
+    <div class="inform-grid">
+
+        <!-- ACCOUNT OVERVIEW -->
+        <div class="left-col">
+            <div class="acchead"><h2>ACCOUNT OVERVIEW</h2></div>
+
+            <div class="acc-inform">
+                <img class="user-img" src="https://tse4.mm.bing.net/th/id/OIP.awAiMS1BCAQ2xS2lcdXGlwHaHH?cb=12&rs=1&pid=ImgDetMain&o=7&rm=3" alt="user">
+                <div>
+                    <h3>Account Information</h3>
+                    <p>Name: Wachirawit Potijak</p>
+                    <p>Type: Saving</p>
+                </div>
+            </div>
+
+            <div class="acc-inform">
+                <img class="user-img" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQbcx796hM1voIOYbOB17va3DH8vKiNLz7WnA&s" alt="">
+                <div>
+                    <h3>Balance Information</h3>
+                    <p>Current Account Balance:</p>
+                    <input type="number" id="abalance" placeholder="Enter account balance">
+
+                    <p>Current Cash Balance:</p>
+                    <input type="number" id="cbalance" placeholder="Enter cash balance">
+
+                    <br><br>
+                    <button id="change" type="button" onclick="money_set()">Change</button>
+                </div>
+            </div>
+
+            <div class="acc-inform">
+                <img class="user-img" src="https://images.emojiterra.com/google/noto-emoji/unicode-16.0/color/1024px/1f5a5.png" alt="">
+                <div>
+                    <h3>Bank Operation</h3>
+                    <select id="action">
+                        <option value="Deposit">Deposit</option>
+                        <option value="Withdraw">Withdraw</option>
+                    </select>
+                    <input type="text" id="amount" placeholder="Enter amount">
+
+                    <button id="submit" type="button" onclick="do_action()">Proceed</button>
+                </div>
+            </div>
+        </div>
+
+        <!-- FINANCIAL TOOLS -->
+        <div class="left-col">
+            <div class="acchead"><h2>FINANCIAL TOOLS</h2></div>
+            <div class="acc-inform">
+                <img class="user-img" src="https://cdn-icons-png.flaticon.com/512/10692/10692946.png" alt="currency">
+                <div>
+                    <h3>Currency Converter</h3>
+                    <p>Input Balance: <input type="number" id="inputCurrency"></p>
+                    <p>Output Balance: <input type="number" id="outputCurrency" readonly></p>
+                    <select id="currency">
+                        <option value="USD">USD</option>
+                        <option value="EUR">EUR</option>
+                        <option value="THB">THB</option>
+                    </select>
+                    <button id="convert" type="button">Proceed</button>
+                </div>
             </div>
         </div>
     </div>
+
     <script src="scripts.js"></script>
 </body>
 </html>
