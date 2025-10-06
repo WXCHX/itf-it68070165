@@ -36,13 +36,22 @@
                 <div>
                     <h3>Balance Information</h3>
                     <p>Current Account Balance:</p>
-                    <input type="number" id="abalance" placeholder="Enter account balance">
-
+                    <div class="group">
+                        <input required="" type="text" class="input">
+                        <span class="highlight"></span>
+                        <span class="bar"></span>
+                        <label>Enter account balance</label>
+                        </div>
                     <p>Current Cash Balance:</p>
-                    <input type="number" id="cbalance" placeholder="Enter cash balance">
+                    <div class="group">
+                        <input required="" type="text" class="input">
+                        <span class="highlight"></span>
+                        <span class="bar"></span>
+                        <label>Enter cash balance</label>
+                        </div>
 
                     <br><br>
-                    <button id="change" type="button" onclick="money_set()">Change</button>
+                    <button class="button_top" id="change" type="button" onclick="money_set()">Change</button>
                 </div>
             </div>
 
@@ -56,7 +65,7 @@
                     </select>
                     <input type="text" id="amount" placeholder="Enter amount">
 
-                    <button id="submit" type="button" onclick="do_action()">Proceed</button>
+                    <button id="submit" class="button_top" type="button" onclick="do_action()">Proceed</button>
                 </div>
             </div>
         </div>
@@ -68,14 +77,28 @@
                 <img class="user-img" src="https://cdn-icons-png.flaticon.com/512/10692/10692946.png" alt="currency">
                 <div>
                     <h3>Currency Converter</h3>
-                    <p>Input Balance: <input type="number" id="inputCurrency"></p>
-                    <p>Output Balance: <input type="number" id="outputCurrency" readonly></p>
+                    <p>Input Balance:
+                        <div class="group">
+                        <input required="" type="text" class="input">
+                        <span class="highlight"></span>
+                        <span class="bar"></span>
+                        <label>Enter amount</label>
+                        </div>
+                    </p>
+                    <p>Output Balance: 
+                        <div class="group">
+                        <input required="" type="text" class="input">
+                        <span class="highlight"></span>
+                        <span class="bar"></span>
+                        <label>Enter amount</label>
+                        </div>
+                    </p>
                     <select id="currency">
                         <option value="USD">USD</option>
                         <option value="EUR">EUR</option>
                         <option value="THB">THB</option>
                     </select>
-                    <button id="convert" type="button">Proceed</button>
+                    <button id="convert" class="button_top" type="button">Proceed</button>
                 </div>
             </div>
         </div>
